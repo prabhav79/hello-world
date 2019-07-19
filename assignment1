@@ -1,0 +1,46 @@
+#include <stdio.h>
+void main()
+    {
+        int num,f=0, c=0,a=0,r=0,i,arm=0;
+        printf("Input a number");
+        scanf("%d",&num);
+        int copy=num;
+        for(i=2;i<num;i++)
+            {
+                if(num%i==0)
+                    c++;
+                    }
+                    if(c!=0)
+                    f=1;
+        while(num!=0)
+            {
+                r=num%10;
+                arm=arm+(r*r*r);
+                num=num/10;
+              }
+              if(arm==copy)
+                a=1;
+
+        if(f==1)
+            {   printf("The number is prime. ");
+                for(i=1;i<=10;i++)
+                    {
+                        printf("\n");
+                        printf("%d x %d = %d",copy,i,(copy*i));
+
+                     }
+              }
+
+        if(a==1)
+            {
+                printf("\n");
+                printf("The number is a armstrong number \n");
+                printf("%d",arm*arm);
+             }
+
+
+ }
+
+
+
+
